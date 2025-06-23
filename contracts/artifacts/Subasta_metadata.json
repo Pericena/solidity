@@ -1,0 +1,324 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_duracionMinutos",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oferente",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "monto",
+						"type": "uint256"
+					}
+				],
+				"name": "NuevaOferta",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "ganador",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "monto",
+						"type": "uint256"
+					}
+				],
+				"name": "SubastaFinalizada",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "constanteComision",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "depositosTotales",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "finalizada",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "finalizarSubasta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ganador",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mostrarGanador",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mostrarOfertas",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "oferente",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "monto",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Subasta.Oferta[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ofertaGanadora",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ofertar",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ofertas",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "oferente",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "monto",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "propietario",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retirarReembolsoParcial",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tiempoFinalizacion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "ultimaOferta",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Luishiño",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"params": {
+						"_duracionMinutos": "Duración inicial de la subasta en minutos"
+					}
+				}
+			},
+			"title": "Subasta Inteligente Segura con Reembolsos y Comisión",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"finalizarSubasta()": {
+					"notice": "Finaliza la subasta y distribuye los fondos"
+				},
+				"mostrarGanador()": {
+					"notice": "Muestra al ganador actual y su oferta"
+				},
+				"mostrarOfertas()": {
+					"notice": "Retorna la lista de todas las ofertas"
+				},
+				"ofertar()": {
+					"notice": "Realiza una oferta válida"
+				},
+				"retirarReembolsoParcial()": {
+					"notice": "Permite al oferente retirar el exceso depositado durante la subasta"
+				}
+			},
+			"notice": "Permite subastas con incremento mínimo del 5%, extensión automática, reembolsos y comisión al propietario.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/modulo.sol": "Subasta"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/modulo.sol": {
+			"keccak256": "0x9dbae7fe84286f1fa6b722893d1f9fd29b379df741a3bf3e96aa9a03c62a9ef0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f1bfd0a9483feb6f4feb9c217ed342da5aca18dbe74cda9c6336c9398671ef3d",
+				"dweb:/ipfs/QmSP7WJc8dhdJsTd1Wh8u5zx6fBALgPZH1q86KBaLAUvzd"
+			]
+		}
+	},
+	"version": 1
+}
