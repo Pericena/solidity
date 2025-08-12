@@ -1,5 +1,3 @@
-¡Perfecto Luishiño! 🔥
-Aquí tienes tu `README.md` listo para que lo pongas en tu repositorio de GitHub o lo presentes como parte del proyecto de forma pro:
 
 ---
 
