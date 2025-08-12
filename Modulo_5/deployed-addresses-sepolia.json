@@ -1,0 +1,11 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "deployer": "0x77B7f7E65BDcF87958B99a1Adb1ADBa6F388f2aa",
+  "contracts": {
+    "DAppToken": "0xC75BE7f5CF5031ae1F6588962CB495935B06a145",
+    "LPToken": "0xB7Aad60043B70dEFe18cEEc17bE4E89Ad9Cc5DE5",
+    "TokenFarm": "0xC25DdA09aC0EdB6344A986A51CF4A892F61746E1"
+  },
+  "deployedAt": "2025-08-06T13:17:12.136Z"
+}
